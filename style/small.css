@@ -1,0 +1,48 @@
+@media screen and (max-width: 700px) {
+    :root {
+        --text_shadow: 2px 2px 10px rgba(0, 0, 0, .2);
+    }
+
+    #toggle {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .info h1 {
+        font-size: large;
+    }
+
+    .courseWork,
+    .location {
+        box-shadow: var(--text_shadow);
+    }
+
+    .firstBody {
+        display: block;
+    }
+
+    .classes {
+        display: block;
+    }
+
+    .open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #toggle img {
+        width: 7%;
+        cursor: pointer;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        color: white;
+    }
+}
