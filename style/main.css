@@ -243,9 +243,7 @@ footer .update {
         cursor: pointer;
 
         position: absolute;
-        top: 0;
-        right: 0;
-
-        color: white;
+        top: 12px;
+        right: 15px;
     }
 }
