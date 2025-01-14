@@ -31,7 +31,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
-    background-color: var(--dark_spring_green);
+    background-color: var(--oxford_blue);
 }
 
 .info img {
@@ -88,22 +88,33 @@
 .courseWork h3,
 .location h3,
 .secondBody h3 {
-    background-color: var(--dark_spring_green);
-    color: var(--pale_purple);
+    background-color: var(--oxford_blue);
+    color: white;
     text-align: center;
     padding: 12px;
     text-shadow: var(--text_shadow);
 }
 
+.creditCount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.creditCount p {
+    text-align: center;
+    margin: 2px;
+}
+
 .location p {
     text-align: center;
-    color: rgb(119, 119, 119);
+    color: var(--oxford_blue);
     font-size: small;
 }
 
 .location img {
-    width: 250px;
-    margin: 5px;
+    width: 300px;
+    margin: 7px;
     border-radius: 20px;
     box-shadow: var(--box_shadow);
 }
@@ -155,12 +166,12 @@
 }
 
 .completed {
-    background-color: var(--oxford_blue);
-    color: var(--pale_purple);
+    background-color: var(--dark_grey);
+    color: white;
 }
 
 .footer {
-    background-color: var(--dark_spring_green);
+    background-color: var(--oxford_blue);
     padding: 15px;
 }
 
@@ -169,11 +180,16 @@
     text-align: center;
 }
 
-.side img {
-    float: right;
-    width: 70px;
-    border: var(--border);
-    margin: -1.5rem 1rem;
+.footer div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer img {
+    display: block;
+    width: 50px;
+    margin: 5px;
 }
 
 footer .update {

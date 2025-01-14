@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style/small.css">
     <title>WDD231 Assignment</title>
     <script src="script/modified.js" defer></script>
+    <script src="script/course-list.js" defer></script>
+    <link rel="icon" href="images/favicon.ico">
 </head>
 
 <body>
@@ -56,28 +58,27 @@
 
         <div class="secondBody">
             <h3>Web and Computer Programming Certificate</h3>
+            <div class="creditCount">
+                <p>The total number of credits is: </p>
+                <span class="credit"></span>
+            </div>
             <div class="classification">
-                <h4>All</h4>
-                <h4>CSE</h4>
-                <h4>WDD</h4>
+                <h4 class="all">All</h4>
+                <h4 class="cse">CSE</h4>
+                <h4 class="wdd">WDD</h4>
             </div>
             <div class="classes">
-                <h4 class="completed">CSE 110</h4>
-                <h4 class="completed">WDD 130</h4>
-                <h4 class="completed">CSE 111</h4>
-                <h4>CSE 210</h4>
-                <h4 class="completed">WDD 131</h4>
-                <h4>WDD 231</h4>
+                
             </div>
         </div>
     </main>
 
     <footer>
         <div class="footer">
-            <p>&copy;2025 &#128512; Oluwadamilare Obalana &#128512; Nigeria</p>
-            <aside class="side">
+            <div>
+                <p>&copy;2025 &#128512; Oluwadamilare Obalana &#128512; Nigeria</p>
                 <img src="images/nigerianFlag.jpg" alt="Image of Nigeria">
-            </aside>
+            </div>
             <p class="update">Last Updated: <span id="date_time"></span></p>
         </div>
     </footer>
