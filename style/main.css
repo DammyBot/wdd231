@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Jersey+15&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     /* --background_color: #f0f0f0; */
     --border: 1px solid rgba(0, 0, 0, .2);
@@ -20,6 +22,9 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
 }
 
 #toggle {
