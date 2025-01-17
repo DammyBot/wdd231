@@ -210,6 +210,16 @@ footer .update {
         display: block;
     }
 
+    #toggle p {
+        font-size: 32px;
+        cursor: pointer;
+        color: white;
+
+        position: absolute;
+        top: 12px;
+        right: 15px;
+    }
+
     .navigation {
         display: none;
     }
@@ -231,19 +241,11 @@ footer .update {
         display: block;
     }
 
-    .open {
+    .navigation.open {
         display: flex;
+        left: auto;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-    }
-
-    #toggle img {
-        width: 7%;
-        cursor: pointer;
-
-        position: absolute;
-        top: 12px;
-        right: 15px;
     }
 }
