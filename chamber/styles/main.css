@@ -368,8 +368,8 @@ label input:focus {
 }
 
 #submit {
-    background-color: var(--accentPrimary);
-    color: var(--bgPrimary);
+    background-color: var(--bgPrimary);
+    color: white;
     padding: 5px;
     border-radius: 5px;
     font-family: var(--fontPrimary);
@@ -423,8 +423,8 @@ form h2 {
 }
 
 #details div button {
-    background-color: var(--accentPrimary);
-    color: var(--bgPrimary);
+    background-color: var(--bgPrimary);
+    color: white;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
