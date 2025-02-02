@@ -1,5 +1,9 @@
 const timeStamp = document.querySelector("#timestamp");
 const submit = document.querySelector("form");
+
+const title = document.querySelector("#organization-title");
+const regex = /^[a-zA-Z\s- ]{7,}$/;
+
 const date1 = new Date();
 document.addEventListener("DOMContentLoaded", () => {
     timeStamp.value = `${date1.getDate()}-${date1.getMonth()+1}-${date1.getFullYear()}`;
@@ -57,3 +61,10 @@ infoElements.forEach((infoElement, index) => {
 button.addEventListener("click", () => {
     modal.close();
 });
+
+submit.addEventListener("submit", (event)=>{
+    if(!regex.test(title.value)){
+        event.preventDefault();
+        alert("Please enter a valid organization title");
+    }
+})
