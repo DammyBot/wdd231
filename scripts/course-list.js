@@ -97,6 +97,7 @@ const courses = [
 
 const credit = document.querySelector(".credit")
 let totalCredits = 10;
+const modal = document.querySelector("#course-details");
 
 const all = document.querySelector(".all");
 const cse = document.querySelector(".cse");
@@ -106,10 +107,16 @@ function displayCourses(data) {
     var body = document.querySelector(".classes");
     data.forEach(course => {
         let title = document.createElement("h4");
+        title.classList.add("courseTitle");
         title.innerHTML = `${course.subject} ${course.number}`;
+        title.style.cursor = "pointer";
         if (course.completed) {
             title.classList.add("completed");
         }
+        title.addEventListener("click", () => {
+            displayModal(course);
+            modal.showModal();
+        })
 
 
 
@@ -150,3 +157,38 @@ wdd.addEventListener("click", () => {
     totalCredits = completed.reduce((total, course) => total + course.credits, 0);
     credit.innerHTML = `<p> ${totalCredits}<\p>`
 });
+
+
+function displayModal(course) {
+    modal.innerHTML = "";
+
+    let coursename = document.createElement("h3")
+    let button = document.createElement("button");
+
+    let title = document.createElement("h4");
+    let credit = document.createElement("p");
+    let certificate = document.createElement("p");
+    let description = document.createElement("p");
+    let technology = document.createElement("p");
+
+
+    coursename.textContent = `${course.subject} ${course.number}`
+    button.textContent = "❌";
+    title.textContent = `${course.title}`;
+    credit.textContent = `Credits: ${course.credits}`
+    certificate.textContent = `Certificate ${course.certificate}`;
+    description.textContent = `${course.description}`;
+    technology.textContent = `Technology: ${course.technology}`;
+
+    modal.appendChild(coursename);
+    modal.appendChild(button);
+    modal.appendChild(title);
+    modal.appendChild(credit);
+    modal.appendChild(certificate);
+    modal.appendChild(description);
+    modal.appendChild(technology);
+
+    button.addEventListener("click", ()=>{
+        modal.close();
+    })
+}
