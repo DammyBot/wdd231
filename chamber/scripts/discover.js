@@ -53,8 +53,24 @@ function displayResults(results){
 
 loadCard();
 document.addEventListener("DOMContentLoaded", ()=>{
-    let last_visited = localStorage.getItem("visited") || dateNow;
-    console.log(last_visited);
-    localStorage.setItem("visited", last_visited);
-    console.log(Number(last_visited) - Number(Date.now()));
+    let last_visited = localStorage.getItem("visited");
+    if (!last_visited) {
+        visited.innerHTML = `<p>Welcome! Let us know if you have any questions.</p>`;
+    }
+    else {
+        const lastVisitDate = new Date(parseInt(last_visited, 10));
+        const timeDiff = dateNow - lastVisitDate.getTime();
+        const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24)); 
+
+        if (daysDiff < 1) {
+            visited.innerHTML = `<p>Back so soon! Awesome!</p>`;
+        } else if (daysDiff === 1) {
+            visited.innerHTML = `<p>You last visited 1 day ago.</p>`;
+        } else {
+            visited.innerHTML = `<p>You last visited ${daysDiff} days ago.</p>`;
+        }
+    }
+
+    // Store the current visit time
+    localStorage.setItem("visited", dateNow.toString());
 })
