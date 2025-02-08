@@ -270,6 +270,7 @@ nav {
 
 .homeContent {
     margin: 5px;
+    padding: 5px;
 }
 
 .homeContent h1 {
@@ -430,6 +431,7 @@ form h2 {
     cursor: pointer;
     display: block;
     margin: 5px auto;
+    transition: .3s ease-in-out;
 }
 
 #details div button:hover {
@@ -437,10 +439,97 @@ form h2 {
     transition: .3s ease-in-out;
 }
 
+.location h2 {
+    text-align: center;
+    padding: 10px;
+    font-size: x-large;
+}
+
+.location p {
+    padding: 5px;
+}
+
+.location button {
+    width: 100%;
+}
+
+.container {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container div {
+    display: grid;
+    grid-template-areas:
+        "image name"
+        "image address"
+        "button button"
+    ;
+    /* margin: auto; */
+    text-align: center;
+    padding: 5px;
+}
+
+.container div h2 {
+    grid-area: name;
+}
+
+.container div address {
+    grid-area: address;
+    display: block;
+    margin: auto;
+}
+
+.container div img {
+    /* display: block; */
+    grid-area: image;
+    margin: 0;
+    width: 300px;
+    height: 200px;
+    transition: .3s ease;
+}
+
+.container div img:hover {
+    box-shadow: 0em 0em .5em black;
+    transition: .3s ease;
+}
+
+.container div button {
+    grid-area: button;
+}
+
+.card {
+    border: 1px solid var(--accentPrimary);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+
+    color: white;
+    text-shadow: 0em 0em .1em black;
+    box-shadow: 0em 0em .3em black;
+}
+
+.card button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: var(--accentPrimary);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.card button:hover {
+    transition: .3s ease;
+    box-shadow: .2em .2em .2em black;
+}
+
 dialog {
     margin: auto;
     padding: 10px;
-    max-width: 80vw;
+    max-width: 85vw;
     font-size: larger;
     background-color: var(--bgPrimary);
     color: white;
@@ -496,7 +585,7 @@ dialog button {
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
     .footerContainer {
         grid-template-columns: 1fr;
     }
@@ -587,5 +676,37 @@ dialog button {
 
     #details1 {
         font-size: medium;
+    }
+
+    .container div {
+        grid-template-areas:
+            "name"
+            "address"
+            "image"
+            "button"
+        ;
+    }
+
+    .container div img {
+        margin: auto;
+    }
+    .container div img:hover {
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container div {
+        display: grid;
+        grid-template-areas:
+            "image name"
+            "image address"
+            "button"
+        ;
+    }
+
+    .container {
+        padding: 5px;
+        grid-template-columns: 1fr;
     }
 }

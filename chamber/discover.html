@@ -12,7 +12,7 @@
     <meta property="og:image" content="chamber\images\logo.png">
     <meta property="og:url" content="https://dammybot.github.io/wdd231/chamber/directory.html">
     <link rel="icon" href="images/favicon.ico">
-    <title>Oluwadamilare Obalana - Chamber of Commerce Thank you Page</title>
+    <title>Oluwadamilare Obalana - Chamber of Commerce Discover Page</title>
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -27,7 +27,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="directory.html">Directory</a></li>
                         <li><a href="join.html">Join</a></li>
-                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="discover.html" class="active">Discover</a></li>
                     </ul>
                 </nav>
             </div>
@@ -39,7 +39,9 @@
     </header>
 
     <main>
-        <div id="details1"></div>
+        <div class="container"></div>
+        <dialog class="location"></dialog>
+        <span id="visited"></span>
     </main>
 
     <footer>
@@ -65,8 +67,9 @@
             </div>
         </div>
     </footer>
+
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/form.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
 </body>
 
 </html>
