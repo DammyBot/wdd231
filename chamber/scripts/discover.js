@@ -1,7 +1,7 @@
 const container = document.querySelector(".container");
 const dialog = document.querySelector(".location");
 const visited = document.querySelector("#visited");
-const dateNow = new Date(Date.now());
+const dateNow = Date.now();
 
 async function loadCard() {
     const details = await fetch("./data/location.json")
@@ -54,4 +54,7 @@ function displayResults(results){
 loadCard();
 document.addEventListener("DOMContentLoaded", ()=>{
     let last_visited = localStorage.getItem("visited") || dateNow;
+    console.log(last_visited);
+    localStorage.setItem("visited", last_visited);
+    console.log(Number(last_visited) - Number(Date.now()));
 })
