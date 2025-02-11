@@ -1,0 +1,22 @@
+[
+    {
+        "img": "./images/img1.jpg",
+        "title": "Game Design",
+        "details": "Game design is the process of creating the rules, systems, and gameplay of a game. It's a creative process that can apply to many types of games, including board games, video games, and simulation games."
+    },
+    {
+        "img": "./images/img2.png",
+        "title": "Game Programming",
+        "details": "Game programming is the process of writing code to create video games. It's a combination of art and science that involves many considerations."
+    },
+    {
+        "img": "./images/img3.png",
+        "title": "Game Testing",
+        "details": "Game testing, also known as video game testing or quality assurance (QA) testing, is the process of playing a video game under development to identify and document any glitches, bugs, or issues with its functionality, performance, and overall quality before it is released to the public, allowing developers to fix them and ensure a smooth playing experience for users."
+    },
+    {
+        "img": "./images/img4.png",
+        "title": "Game Creativity",
+        "details": "Game creativity is the ability to use imagination to create new and useful ideas, strategies, or actions in a game. It can also involve adapting to changing situations, or creating original content."
+    }
+]
