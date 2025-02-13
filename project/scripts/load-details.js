@@ -6,7 +6,6 @@ async function loadcontent(url) {
     const data = await fetch(url);
     if(data.ok){
         const result = await data.json();
-        console.log(result);
         updateDetails(result);
     }
 }
@@ -33,7 +32,8 @@ function updateDetails(results){
 
         button.addEventListener("click", ()=>{
             dialog.innerHTML = "";
-            dialog.append(title, details, close);
+            const titleClone = title.cloneNode(true);
+            dialog.append(titleClone, details, close);
             dialog.showModal();
 
             close.addEventListener("click", () => {

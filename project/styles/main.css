@@ -43,7 +43,7 @@ nav {
     justify-content: space-between;
 
     border-bottom: 1px solid var(--color2);
-    padding: 5px;
+    padding: 10px;
 
     position: relative;
 }
@@ -67,7 +67,7 @@ nav h4 a:hover {
     margin: 5px;
     border-radius: 5px;
     border: 1px solid white;
-    box-shadow: 0em 0em 1em black;
+    box-shadow: 0em 0em .5em black;
     transition: .6s ease;
 }
 
@@ -96,7 +96,7 @@ nav h4 a:hover {
     color: white;
     background-color: var(--color2);
     border-radius: 5px;
-    box-shadow: 0em 0em 1em black;
+    box-shadow: 0em 0em .3em black;
     transition: .3s ease;
 }
 
@@ -125,6 +125,14 @@ nav h4 a:hover {
 
 .hero {
     padding: 0;
+}
+
+main {
+    color: white;
+    text-align: center;
+}
+main p {
+    font-family: var(--font1);
 }
 
 main div {
@@ -156,10 +164,18 @@ main div img {
 .details img {
     width: 100%;
     border-radius: 10px;
+    filter: opacity(.5) blur(.5px);
+    transition: .5s ease;
+}
+
+.details img:hover {
+    filter: opacity(1) blur(0px);
+    transition: .5s ease;
 }
 
 .details h3 {
     border-bottom: 1px solid var(--color2);
+    padding-bottom: 5px;
 }
 
 .details div {
@@ -180,24 +196,48 @@ dialog button {
     cursor: pointer;
     transition: .3s ease;
 }
+
 .details button:hover,
 dialog button:hover {
     transition: .3s ease;
-    transform: scale(110%);
+    transform: scale(1.1);
 }
+
+.details p {
+    padding: 5px;
+}
+
 dialog button {
     background-image: linear-gradient(30deg, var(--color1), var(--color6));
     color: var(--color3);
 }
+
 ::backdrop {
     background-image: linear-gradient(45deg, var(--color2), var(--color8));
     opacity: .7;
 }
 
-.community {
-    border-top: 1px solid var(--color2);
-    border-bottom: 1px solid var(--color2);
-    padding: 20px;
+.all,
+.engines,
+.languages,
+.tools {
+    background-image: linear-gradient(45deg, var(--color1), var(--color2));
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 .2em black;
+    border: none;
+    margin: 5px;
+    font-size: larger;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.all:hover,
+.engines:hover,
+.languages:hover,
+.tools:hover {
+    transform: scale(1.1);
+    transition: .3s ease;
 }
 
 dialog {
@@ -210,14 +250,74 @@ dialog {
     border: 1px solid white;
     border-radius: 10px;
 }
+
 dialog h3 {
     padding: 5px;
     font-size: xx-large;
     border-bottom: 1px solid white;
 }
+
 dialog p {
     padding: 5px;
     font-family: var(--font1);
+}
+
+footer {
+    border-top: 1px solid var(--color2);
+    padding: 10px;
+    color: white;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    background-image: linear-gradient(45deg, var(--color8), var(--color7));
+}
+
+.info {
+    margin: auto;
+}
+
+.info p {
+    font-family: var(--font1);
+    padding: 5px;
+}
+
+.copyright {
+    margin: auto;
+}
+
+.copyright p {
+    font-family: var(--font1);
+}
+
+.links {
+    grid-column: 1/3;
+    grid-row: 2/3;
+
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    text-align: left;
+}
+
+.links a {
+    color: var(--color5);
+    transition: .3s ease;
+    font-family: var(--font1);
+    display: block;
+    padding: 5px;
+    margin: 2px;
+}
+
+.links a:hover {
+    color: var(--color4);
+    transition: .3s ease;
+}
+
+.links a:active {
+    color: var(--color1);
 }
 
 @media screen and (max-width: 48rem) {
@@ -280,5 +380,36 @@ dialog p {
 
     .details {
         grid-template-columns: 1fr;
+    }
+
+    .details img {
+        filter: none;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .links {
+        grid-column: auto;
+        grid-row: 3/4;
+
+        display: block;
+        text-align: center;
+    }
+    .links h3 {
+        font-size: xx-large;
+    }
+    .all,
+    .engines,
+    .languages,
+    .tools {
+        font-size: large;
+    }
+    .all:hover,
+    .engines:hover,
+    .languages:hover,
+    .tools:hover {
+        transform: none;
     }
 }
