@@ -1,7 +1,6 @@
 const url = window.location.href.split("?")[1].split("&");
 const submitted = document.querySelector("#date");
 const date = new Date();
-console.log(date);
 url[0] = url[0].replace("+", " ");
 url[1] = url[1].replace("%40", "@");
 url[2] = url[2].replaceAll("+", " ");
